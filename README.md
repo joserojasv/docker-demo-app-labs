@@ -71,15 +71,16 @@ Name the repo the same as your image (e.g., goals-node)
 
 🏷️ 3. Tag your image:
 ```bash
+docker tag <image_name> <your-dockerhub-username>/<repo_name>:<version>
 docker tag goals-node jrojascr/goals-node:latest
-docker tag goals-node jrojascr/goals-node:v1
+docker tag goals-node jrojascr/goals-node:v1 # specific version tag
 ```
 Replace jrojascr with your Docker Hub username if different.
 
 📤 4. Push the image:
 ```bash
-docker push jrojascr/goals-node:latest
-docker push jrojascr/goals-node:v1
+docker push <your-dockerhub-username>/<repo_name>
+docker push jrojascr/goals-node
 ```
 
 ### ✅ Steps for Another User to Pull & Run Your the Image
