@@ -99,4 +99,31 @@ or send them this Docker Hub link directly:
 https://hub.docker.com/r/jrojascr/goals-node
 
 
+### ✏️ Docker Useful Commands
 
+---
+
+⚠️ WARNING
+
+**Be careful when running these commands! They can delete containers, images, and more.**</br>
+1.Stop and remove all containers
+```bash
+docker stop $(docker ps -q) && docker rm $(docker ps -aq)
+```
+
+2. Remove all images 
+```bash
+docker rmi $(docker images -q)
+```
+
+🔥 Optional full cleanup:
+If you're just cleaning up everything (containers, images, networks, build cache):
+```bash
+docker system prune -a
+```
+⚠️ This will delete:
+All stopped containers
+All images not used by running containers
+All networks not used
+All build cache
+You’ll be prompted to confirm before it runs.
